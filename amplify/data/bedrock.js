@@ -11,7 +11,7 @@
  * @param {object} ctx - AppSync リゾルバーのコンテキストオブジェクト。
  * @returns {object} HTTP リクエストの設定。
  */
-function request(ctx) { // ★`export` キーワードを削除しました★
+export function request(ctx) { // ★export を維持★
     const { ingredients = [] } = ctx.args;
   
     // ingredients が配列であることを保証し、安全に結合する
@@ -57,7 +57,7 @@ function request(ctx) { // ★`export` キーワードを削除しました★
    * @param {object} ctx - AppSync リゾルバーのコンテキストオブジェクト。
    * @returns {object} レスポンスオブジェクト。
    */
-function response(ctx) { // ★`export` キーワードを削除しました★
+export function response(ctx) { // ★export を維持★
     // --- エラー特定のためのログ（response フェーズ） ---
     // Bedrockからの生のレスポンスボディをログ出力します。
     // これにより、もしBedrockからのレスポンスが期待と異なる形式であっても確認できます。
